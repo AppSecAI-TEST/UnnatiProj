@@ -1,0 +1,203 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context="com.example.unnatiproj.Exam">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="70dp">
+
+            <TextView
+                android:id="@+id/rtid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Teacher Id:"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/retid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/rsname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Student Name:"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/rse_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+
+            <TextView
+                android:id="@+id/rcours"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Course:"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/er_cours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/rbranch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Branch:"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/re_branch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/rcer_no"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Certificate No:"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/er_cerno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/rdate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Current Date: (eg.01/08/2017)"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/re_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="date" />
+
+            <TextView
+                android:id="@+id/txt_amt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Amount"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/edt_amt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/tot_paid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Total Fees Paid:"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/edt_totpaid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/mode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Mode:"
+                android:textColor="@color/Black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cash" />
+
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cheque" />
+
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NEFT" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/chq_num"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Cheque Number:"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/edt_chqno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/bank"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Bank:"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/edt_bank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Submit" />
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

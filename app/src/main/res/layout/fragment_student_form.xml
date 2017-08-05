@@ -1,0 +1,133 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context="com.example.unnatiproj.StudentForm">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Student Id:"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/esid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Name:"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/ename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/num"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Phone Number:"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/enumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:maxLength="10" />
+
+            <TextView
+                android:id="@+id/mail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Email Id:"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/course"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Course:"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/ecourse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/cdate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Current Date: (eg.01/08/2017)"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/edate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="date" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/sactive"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="Active:"
+                    android:textColor="@color/Black" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.94"
+                    android:text="ToggleButton" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Submit" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>
