@@ -15,11 +15,11 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="137dp"
+        android:layout_width="182dp"
         android:layout_height="79dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         app:srcCompat="@drawable/unnati"
-        android:layout_weight="0.58" />
+        android:layout_weight="0.15" />
 
     <TextView
         android:layout_width="match_parent"

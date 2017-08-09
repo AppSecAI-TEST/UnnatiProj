@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
+    android:id="@+id/teachers_form"
+    android:backgroundTint="@color/white"
     tools:context="com.example.unnatiproj.TeachersForm">
 
 
@@ -13,14 +14,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_margin="16dp">
 
             <TextView
                 android:id="@+id/tid"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Teacher Id:"
-                android:textColor="@color/Black" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <EditText
                 android:id="@+id/etid"
@@ -34,7 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Name:"
-                android:textColor="@color/Black" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <EditText
                 android:id="@+id/etname"
@@ -48,7 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Phone Number:"
-                android:textColor="@color/Black" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <EditText
                 android:id="@+id/etnumber"
@@ -63,7 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Email Id:"
-                android:textColor="@color/Black" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <EditText
                 android:id="@+id/temail"
@@ -76,10 +78,10 @@
                 android:id="@+id/txtbranch"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Branch:"
-                android:textColor="@color/Black" />
+                android:text="Select Branch:"
+                android:textColor="@color/colorPrimaryDark" />
 
-            <EditText
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
                 android:id="@+id/tbranch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -91,7 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Username"
-                android:textColor="@color/Black" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <EditText
                 android:id="@+id/tusrname"
@@ -104,15 +106,29 @@
                 android:id="@+id/txt_pass"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Username"
-                android:textColor="@color/Black" />
+                android:text="Password"
+                android:textColor="@color/colorPrimaryDark" />
 
             <EditText
                 android:id="@+id/tpass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text" />
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/re_pass"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Re-Enter Password"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <EditText
+                android:id="@+id/repass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword" />
 
 
             <Button
@@ -120,7 +136,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Submit" />
+                android:layout_marginBottom="10dp"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/colorPrimaryDark"/>
         </LinearLayout>
     </ScrollView>
 

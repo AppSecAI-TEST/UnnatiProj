@@ -4,16 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/suraj"
     tools:context="com.example.unnatiproj.SplashScreen">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/unnati" />
 
     <ProgressBar
         android:id="@+id/progressBar2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:progressBackgroundTint="#29b6f6"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="115dp" />
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="30dp"
+        android:progressBackgroundTint="#29b6f6" />
 
 </RelativeLayout>

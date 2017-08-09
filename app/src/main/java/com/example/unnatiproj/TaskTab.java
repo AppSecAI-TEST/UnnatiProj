@@ -19,6 +19,10 @@ public class TaskTab extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
+        HomePage.actionBar.setTitle("Task Tab");
+        HomePage.navigationBarMenu.findItem(R.id.task_tab).setChecked(true);
+
         return inflater.inflate(R.layout.fragment_task_tab, container, false);
     }
 

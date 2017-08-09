@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.ActionBar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -32,6 +33,7 @@ public class HomePage extends AppCompatActivity
     static NavigationView navigationView;
     static Menu actionBarMenu, navigationBarMenu;
     FragmentManager fragmentManager;
+    static ActionBar actionBar;
 
 
     @Override
@@ -40,6 +42,7 @@ public class HomePage extends AppCompatActivity
         setContentView(R.layout.home_page);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        actionBar = getSupportActionBar();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -117,7 +120,7 @@ public class HomePage extends AppCompatActivity
 
         switch (id) {
             case R.id.sign_in:
-                manager.beginTransaction().replace(R.id.login, new SignIn()).commit();
+                fragmentManager.beginTransaction().replace(R.id.login, new SignIn()).commit();
                 title = "Sign In";
                 break;
         }
@@ -132,19 +135,19 @@ public class HomePage extends AppCompatActivity
 
         manager = getFragmentManager();
         switch (item.getItemId()) {
+            case R.id.nav_home:
+                manager.beginTransaction()
+                        .replace(R.id.login, new BlankFragment())
+                        .commit();
+                navigationView.getMenu().findItem(R.id.nav_home).setChecked(true);
+                title = "Home Page";
+                break;
             case R.id.students_form:
                 manager.beginTransaction()
                         .replace(R.id.login, new StudentForm())
                         .commit();
                 navigationView.getMenu().findItem(R.id.students_form).setChecked(true);
                 title = "Student Form";
-                break;
-            case R.id.teachers_form:
-                manager.beginTransaction()
-                        .replace(R.id.login, new TeachersForm())
-                        .commit();
-                navigationView.getMenu().findItem(R.id.teachers_form).setChecked(true);
-                title = "Teachers Form";
                 break;
             case R.id.enquiry_form:
                 manager.beginTransaction()
@@ -181,14 +184,6 @@ public class HomePage extends AppCompatActivity
                 navigationView.getMenu().findItem(R.id.daily_act).setChecked(true);
                 title = "Daily Activity";
                 break;
-            case R.id.signin:
-                manager.beginTransaction()
-                        .replace(R.id.login, new SignIn())
-                        .commit();
-                navigationView.getMenu().findItem(R.id.signin).setChecked(true);
-                title = "Sign In";
-                break;
-
 
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

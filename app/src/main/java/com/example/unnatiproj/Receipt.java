@@ -27,6 +27,10 @@ public class Receipt extends Fragment implements TabLayout.OnTabSelectedListener
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        HomePage.actionBar.setTitle("Receipt");
+        HomePage.navigationBarMenu.findItem(R.id.receipt).setChecked(true);
+
+
         View view= inflater.inflate(R.layout.fragment_receipt, container, false);
         tabLayout = (TabLayout)view.findViewById(R.id.tabLayout);
         viewPager = (ViewPager)view.findViewById(R.id.pager);
@@ -43,6 +47,7 @@ public class Receipt extends Fragment implements TabLayout.OnTabSelectedListener
     @Override
     public void onTabSelected(TabLayout.Tab tab) {
 
+        viewPager.setCurrentItem(tab.getPosition());
     }
 
     @Override

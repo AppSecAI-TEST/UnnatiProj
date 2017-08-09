@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
+    android:backgroundTint="@color/white"
     tools:context="com.example.unnatiproj.Training">
 
     <ScrollView
@@ -12,15 +12,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:orientation="vertical"
-            android:layout_marginTop="70dp">
+            android:padding="16dp">
 
             <TextView
                 android:id="@+id/rtid"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Teacher Id:"
-                android:textColor="@color/Black" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <EditText
                 android:id="@+id/retid"
@@ -34,9 +35,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Student Name:"
-                android:textColor="@color/Black" />
+                android:textColor="@color/colorPrimaryDark" />
 
-            <EditText
+            <com.rengwuxian.materialedittext.MaterialAutoCompleteTextView
                 android:id="@+id/rse_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -49,7 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Course:"
-                android:textColor="@color/Black" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <EditText
                 android:id="@+id/er_cours"
@@ -63,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Branch:"
-                android:textColor="@color/Black" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <EditText
                 android:id="@+id/re_branch"
@@ -76,8 +77,8 @@
                 android:id="@+id/rdate"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Current Date: (eg.01/08/2017)"
-                android:textColor="@color/Black" />
+                android:text="Current Date:"
+                android:textColor="@color/colorPrimaryDark" />
 
             <EditText
                 android:id="@+id/re_date"
@@ -91,7 +92,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Amount"
-                android:textColor="@color/Black" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <EditText
                 android:id="@+id/edt_amt"
@@ -105,7 +106,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Total Fees Paid:"
-                android:textColor="@color/Black" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <EditText
                 android:id="@+id/edt_totpaid"
@@ -114,37 +115,46 @@
                 android:ems="10"
                 android:inputType="text" />
 
-            <TextView
-                android:id="@+id/mode"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Mode:"
-                android:textColor="@color/Black" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <RadioButton
-                    android:id="@+id/radioButton"
+                <TextView
+                    android:id="@+id/mode"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Cash" />
+                    android:layout_height="match_parent"
+                    android:paddingRight="20dp"
+                    android:text="Mode:"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
 
-                <RadioButton
-                    android:id="@+id/radioButton2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Cheque" />
+                    <RadioButton
+                        android:id="@+id/radioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cash" />
 
 
-                <RadioButton
-                    android:id="@+id/radioButton3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="NEFT" />
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cheque" />
+
+
+                    <RadioButton
+                        android:id="@+id/radioButton3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NEFT" />
+
+                </RadioGroup>
 
             </LinearLayout>
 
@@ -152,8 +162,9 @@
                 android:id="@+id/chq_num"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
                 android:text="Cheque Number:"
-                android:textColor="@color/Black" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <EditText
                 android:id="@+id/edt_chqno"
@@ -167,7 +178,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Bank:"
-                android:textColor="@color/Black" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <EditText
                 android:id="@+id/edt_bank"
@@ -177,12 +188,17 @@
                 android:inputType="text" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/button5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
-                android:text="Submit" />
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:text="Submit"
+                android:textColor="@color/white" />
+
         </LinearLayout>
+
     </ScrollView>
 
 

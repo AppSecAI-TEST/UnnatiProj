@@ -20,6 +20,9 @@ public class Salary extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        HomePage.actionBar.setTitle("Salary");
+        HomePage.navigationBarMenu.findItem(R.id.salary).setChecked(true);
+
         return inflater.inflate(R.layout.fragment_salary, container, false);
     }
 

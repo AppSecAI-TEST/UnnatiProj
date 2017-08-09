@@ -7,6 +7,7 @@
     android:background="@color/white"
     android:gravity="center"
     android:orientation="vertical"
+    android:backgroundTint="@color/white"
     tools:context="com.example.unnatiproj.SignIn">
 
 
@@ -35,6 +36,7 @@
             android:layout_height="match_parent"
             android:layout_marginTop="50dp"
             android:gravity="center"
+            android:backgroundTint="@color/white"
             android:orientation="vertical">
 
 

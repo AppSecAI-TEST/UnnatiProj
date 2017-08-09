@@ -6,10 +6,16 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 
 public class Training extends Fragment {
 
+    EditText t1;
 
     public Training() {
         // Required empty public constructor
@@ -20,7 +26,13 @@ public class Training extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_training, container, false);
+        View view= inflater.inflate(R.layout.fragment_training, container, false);
+        t1=(EditText) view.findViewById(R.id.re_date);
+        Calendar c=Calendar.getInstance();
+        SimpleDateFormat d= new SimpleDateFormat("dd-MM-yyyy");
+        t1.setText(d.format(c.getTime()));
+        t1.setKeyListener(null);
+        return view;
     }
 
 }

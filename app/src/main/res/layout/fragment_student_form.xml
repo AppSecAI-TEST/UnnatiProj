@@ -1,8 +1,9 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/white"
     tools:context="com.example.unnatiproj.StudentForm">
 
     <ScrollView
@@ -12,6 +13,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="16dp"
             android:orientation="vertical">
 
             <TextView
@@ -19,7 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Student Id:"
-                android:textColor="@color/Black" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <EditText
                 android:id="@+id/esid"
@@ -33,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Name:"
-                android:textColor="@color/Black" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <EditText
                 android:id="@+id/ename"
@@ -47,7 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Phone Number:"
-                android:textColor="@color/Black" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <EditText
                 android:id="@+id/enumber"
@@ -62,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Email Id:"
-                android:textColor="@color/Black" />
+                android:textColor="@color/colorPrimaryDark" />
 
             <EditText
                 android:id="@+id/email"
@@ -76,21 +78,54 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Course:"
-                android:textColor="@color/Black" />
+                android:textColor="@color/colorPrimaryDark" />
 
-            <EditText
-                android:id="@+id/ecourse"
+            <com.rengwuxian.materialedittext.MaterialAutoCompleteTextView
+                android:id="@+id/course_spn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/colorPrimary"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:gravity="left"
+                android:hint="Enter Course Name"
+                app:met_primaryColor="@color/colorPrimary" />
+
+            <!--<com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/course_spn"-->
+            <!--android:backgroundTint="@color/colorPrimary"-->
+            <!--android:ems="10"-->
+            <!--android:gravity="left"-->
+            <!--android:hint="Select Course"-->
+            <!--app:met_primaryColor="@color/colorPrimary"-->
+            <!--android:layout_gravity="center"/>-->
+
+            <TextView
+                android:id="@+id/branch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Branch:"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:id="@+id/bspinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/colorPrimary"
+                android:ems="10"
+                android:gravity="left"
+                android:hint="Select Branch"
+                app:met_primaryColor="@color/colorPrimary" />
 
             <TextView
                 android:id="@+id/cdate"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Current Date: (eg.01/08/2017)"
-                android:textColor="@color/Black" />
+                android:text="Current Date: "
+                android:textColor="@color/colorPrimaryDark" />
 
             <EditText
                 android:id="@+id/edate"
@@ -110,7 +145,7 @@
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:text="Active:"
-                    android:textColor="@color/Black" />
+                    android:textColor="@color/colorPrimaryDark" />
 
                 <ToggleButton
                     android:id="@+id/toggleButton"
@@ -118,6 +153,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.94"
                     android:text="ToggleButton" />
+                <!--android:background="@drawable/toggle_selector"-->
+                <!--android:textOff=""-->
+                <!--android:textOn=""-->
+
             </LinearLayout>
 
             <Button
@@ -125,9 +164,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Submit" />
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:text="Submit"
+                android:textColor="@color/white" />
         </LinearLayout>
     </ScrollView>
 
 
-</FrameLayout>
+</LinearLayout>
