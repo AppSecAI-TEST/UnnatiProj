@@ -3,9 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
     android:backgroundTint="@color/white"
-    tools:context="com.example.unnatiproj.DailyActivity">
+    tools:context="com.example.unnatiproj.AddTask">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -14,56 +13,65 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:padding="10dp">
 
             <TextView
-                android:id="@+id/act_date"
+                android:id="@+id/taskdate"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Current Date:"
+                android:text="Current Date: "
                 android:textColor="@color/colorPrimaryDark" />
 
             <EditText
-                android:id="@+id/daily_date"
+                android:id="@+id/task_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="date" />
 
             <TextView
-                android:id="@+id/act_name"
+                android:id="@+id/idtask"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Name:"
+                android:layout_height="wrap_content"
+                android:text="Task Id:"
                 android:textColor="@color/colorPrimaryDark" />
 
             <EditText
-                android:id="@+id/acte_name"
+                android:id="@+id/taskid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName" />
 
             <TextView
-                android:id="@+id/location"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Location:"
-                android:textColor="@color/colorPrimaryDark" />
-
-            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
-                android:id="@+id/loc_spinner"
+                android:id="@+id/addtask"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:text="Task:"
+                android:textColor="@color/colorPrimaryDark" />
+
+
+            <EditText
+                android:id="@+id/task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorPrimary"
                 android:ems="10"
-                android:gravity="left"
-                android:hint="Select Location"
-                app:met_primaryColor="@color/colorPrimary" />
+                android:gravity="top"
+                android:imeOptions="flagNoExtractUi"
+                android:maxLines="5"
+                android:minLines="3"
+                android:overScrollMode="always"
+                android:scrollHorizontally="false"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:textCursorDrawable="@drawable/cursor_color" />
 
             <Button
-                android:id="@+id/btndaily"
+                android:id="@+id/btaddtask"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"

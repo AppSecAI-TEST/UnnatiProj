@@ -37,9 +37,9 @@ public class DailyActivity extends Fragment {
         HomePage.navigationBarMenu.findItem(R.id.daily_act).setChecked(true);
 
         View view = inflater.inflate(R.layout.fragment_daily, container, false);
-        t1=(EditText) view.findViewById(R.id.daily_date);
-        Calendar c=Calendar.getInstance();
-        SimpleDateFormat d= new SimpleDateFormat("dd-MM-yyyy");
+        t1 = (EditText) view.findViewById(R.id.daily_date);
+        Calendar c = Calendar.getInstance();
+        SimpleDateFormat d = new SimpleDateFormat("dd-MM-yyyy");
         t1.setText(d.format(c.getTime()));
         t1.setKeyListener(null);
 

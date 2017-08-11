@@ -38,8 +38,21 @@ public class SignIn extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_sign_in, container, false);
 
-        log = (Button) view.findViewById(R.id.btnreg);
+        log = (Button) view.findViewById(R.id.btnsignin);
         log.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getFragmentManager()
+                        .beginTransaction()
+                        .setCustomAnimations(R.animator.fade_in, R.animator.fade_out)
+                        .replace(R.id.login, new StudentList())
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+        signup = (Button) view.findViewById(R.id.btnreg);
+        signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 getFragmentManager()
